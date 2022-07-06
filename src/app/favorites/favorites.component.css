@@ -1,0 +1,174 @@
+.wholedoc {
+  z-index: 4;
+  height: 100vh;
+  width: 100vw;
+  background-color: whitesmoke;
+  opacity: 10%;
+  position: fixed;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-bottom: 1px solid coral;
+}
+
+h1 {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.source-icon {
+  display: flex;
+  justify-content: space-around;
+}
+
+span {
+  display: flex;
+  justify-content: center;
+  align-items: space-around;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.fa-home {
+  color: black;
+}
+
+a {
+  color: rgb(255, 38, 0);
+}
+
+a:hover {
+  color: coral;
+}
+
+img {
+  border-radius: 6px;
+}
+
+.more-info {
+  width: 400px;
+  height: fit-content;
+  background-color: rgba(255, 160, 122, 0.9);
+  position: absolute;
+  z-index: 5;
+  border-radius: 15px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 25px;
+}
+.textContainer {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.labels {
+  font-weight: bold;
+  color: darkslategrey;
+  list-style-type: none;
+}
+
+p {
+  font-weight: bold;
+}
+
+@media screen and (min-width: 670px) {
+  section {
+    width: 48%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 15px;
+    padding: 10px;
+  }
+
+  .container {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  span {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .fa-home {
+    color: black;
+  }
+
+  img {
+    border-radius: 6px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  section {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+  }
+
+  .source-icon {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  span {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 5px;
+  }
+
+  .fa-home {
+    color: coral;
+  }
+
+  .fa-times:hover {
+    color: orangered;
+  }
+
+  img {
+    border-radius: 6px;
+  }
+}

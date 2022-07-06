@@ -1,0 +1,50 @@
+<div *ngIf="clicked">
+  <div class="wholedoc" (click)="hideRecipe()"></div>
+</div>
+<main class="bod">
+  <div class="container">
+    <section class="recipePost" *ngFor="let recipe of recipes; index as i">
+      <h1 class="label">{{ recipe.recipe.label }}</h1>
+      <img [src]="recipe.recipe.image" alt="recipe" (click)="setIndex(i)" />
+      <span class="source-icon">
+        <a [href]="recipe.recipe.url">
+          <p>{{ recipe.recipe.source }}</p>
+        </a>
+        <i
+          (click)="addFavorite(recipe)"
+          class="far fa-heart"
+          [ngClass]="{ heart: recipe.favorite }"
+        ></i>
+      </span>
+      <div class="more-info" *ngIf="index === i">
+        <i (click)="hideRecipe()" class="fas fa-times"></i>
+
+        <span class="textContainer">
+          <ul class="labels" *ngFor="let label of recipe.recipe.healthLabels">
+            <li>{{ label }}</li>
+          </ul>
+        </span>
+        <p *ngIf="recipe.recipe.totalTime > 0">
+          Total Time: {{ recipe.recipe.totalTime }} minutes
+        </p>
+        <p>Servings: {{ recipe.recipe.yield }}</p>
+
+        <p>
+          Calories per serving:
+          {{ math.round(recipe.recipe.calories / recipe.recipe.yield) }}
+        </p>
+
+        <p>Ingredients:</p>
+        <ul
+          class="ingredients"
+          *ngFor="let ingredient of recipe.recipe.ingredientLines"
+        >
+          <li class="ingredients">
+            {{ ingredient }}
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</main>
+

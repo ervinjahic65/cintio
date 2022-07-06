@@ -1,0 +1,45 @@
+<main [ngClass]="{ ' bod': backgroundImage }">
+  <section>
+    <form
+      class="form"
+      #searchForm="ngForm"
+      (ngSubmit)="doSearch(searchForm.value)"
+    >
+      <label
+        >Search<input
+          id="search"
+          name="search"
+          type="text"
+          placeholder="Search"
+          ngModel
+      /></label>
+
+      <label
+        >Max Calories
+        <input
+          id="calories"
+          name="calories"
+          type="text"
+          placeholder="Calories"
+          ngModel
+      /></label>
+
+      <label
+        >Diet Type
+        <select name="diet" id="diet-type" class="diet-options" ngModel>
+          <option value="balanced">Balanced</option>
+          <option value="high-protein">High Protein</option>
+          <option value="low-carb">Low Carb</option>
+          <option value="low-fat">Low Fat</option>
+        </select></label
+      >
+
+      <button type="submit">
+        Find Recipes
+      </button>
+    </form>
+    <a id="fav" routerLink="/favorites">My Favorites</a>
+  </section>
+</main>
+
+<app-recipe-list [recipes]="recipes"></app-recipe-list>
