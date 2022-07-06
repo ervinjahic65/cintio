@@ -2,8 +2,6 @@ import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 
-// const API_KEY = "a30e2cfbb73fc3dea624656c24d5e8ee";
-// const APP_ID = "2f9c222e";
 
 @Injectable({
   providedIn: "root"
