@@ -15,6 +15,7 @@ export class SearchCriteriaComponent implements OnInit {
   backgroundImage: boolean = true;
   constructor(private foodService: FoodService, private router: Router) {}
 
+  // Manual merging of two branches
   doSearch(form: any) {
     this.foodService
       .getRecipe(form.search, form.calories, form.diet)
