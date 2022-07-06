@@ -1,7 +1,6 @@
 import { Component, OnInit, Input } from "@angular/core";
-import { RecipeListComponent } from "../recipe-list/recipe-list.component";
 import { FoodService } from "../services/food.service";
-import { SearchCriteriaComponent } from "../search-criteria/search-criteria.component";
+
 @Component({
   selector: "app-favorites",
   templateUrl: "./favorites.component.html",

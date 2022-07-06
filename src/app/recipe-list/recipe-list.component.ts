@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, EventEmitter } from "@angular/core";
 import { FoodService } from "../services/food.service";
-import { SearchCriteriaComponent } from "../search-criteria/search-criteria.component";
+
 @Component({
   selector: "app-recipe-list",
   templateUrl: "./recipe-list.component.html",
